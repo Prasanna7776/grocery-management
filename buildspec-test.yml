@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies for test...
+      - npm install  # or pip install -r requirements.txt
+
+  build:
+    commands:
+      - echo Running unit tests...
+      - npm test  # or pytest, mocha, etc.
+
+reports:
+  unit-test-report:
+    files:
+      - test-report.xml  # optional if generating report
+    file-format: JUNITXML
